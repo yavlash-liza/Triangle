@@ -10,7 +10,7 @@ import java.util.List;
 public class Runner {
     public static void main(String[] args) throws InvalidMethodParameterException {
         TriangleReader reader = new TriangleReader();
-        List<String> strings = reader.readFile("src/main/resources/data.txt");
+        List<String> strings = reader.readFile("./src/main/resources/data.txt");
         TriangleParser parser = new TriangleParser();
         List<Triangle> triangles = parser.parseStringListToArray(strings);
 
