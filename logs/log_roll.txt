@@ -1,0 +1,2 @@
+21-11-21 20:19.692 [main] INFO  com.company.yavlash.util.TriangleReader - Read file data.txt is successful
+21-11-21 20:19.731 [main] INFO  com.company.yavlash.util.TriangleParser - Parsing is successful
