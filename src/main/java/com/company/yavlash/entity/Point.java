@@ -49,9 +49,11 @@ public class Point {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + "{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        return new StringBuilder(getClass().getSimpleName())
+                .append("{")
+                .append("x=").append(getX())
+                .append(", y=").append(getY())
+                .append("}")
+                .toString();
     }
 }
