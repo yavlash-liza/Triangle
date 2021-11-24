@@ -2,8 +2,7 @@ package com.company.yavlash.service;
 
 import com.company.yavlash.entity.Point;
 import com.company.yavlash.entity.Triangle;
-import com.company.yavlash.exception.InvalidMethodParameterException;
-import com.company.yavlash.exception.TriangleNotExistException;
+import com.company.yavlash.exception.TriangleException;
 import com.company.yavlash.service.impl.TriangleServiceImpl;
 import org.junit.Assert;
 import org.junit.Before;
@@ -20,25 +19,7 @@ public class TriangleServiceImplTest {
     }
 
     @Test
-    public void isTriangleTest_RelevantData() throws InvalidMethodParameterException {
-        //given
-        Triangle triangle = new Triangle(new Point(0,0), new Point (0, 4), new Point(4, 0));
-
-        //when
-        boolean actual = triangleService.isTriangle(triangle);
-
-        //then
-        Assert.assertTrue(actual);
-    }
-
-    @Test(expected = InvalidMethodParameterException.class)
-    public void isTriangleTest_IrrelevantTextType() throws InvalidMethodParameterException {
-        //given && when && then
-        triangleService.isTriangle(null);
-    }
-
-    @Test
-    public void findSquareTest_RelevantData() throws TriangleNotExistException, InvalidMethodParameterException {
+    public void findSquareTest_RelevantData() throws TriangleException {
         //given
         double expected = 3.00;
 
@@ -49,14 +30,14 @@ public class TriangleServiceImplTest {
         Assert.assertEquals(actual, expected, 3);
     }
 
-    @Test(expected = InvalidMethodParameterException.class)
-    public void findSquareTest_IrrelevantTextType() throws TriangleNotExistException, InvalidMethodParameterException {
+    @Test(expected = TriangleException.class)
+    public void findSquareTest_NullData() throws TriangleException {
         //given && when && then
         triangleService.findSquare(null);
     }
 
     @Test
-    public void findPerimeterTest_RelevantData() throws TriangleNotExistException, InvalidMethodParameterException {
+    public void findPerimeterTest_RelevantData() throws TriangleException {
         //given
         double expected = 8.26;
 
@@ -67,14 +48,14 @@ public class TriangleServiceImplTest {
         Assert.assertEquals(actual, expected, 2);
     }
 
-    @Test(expected = InvalidMethodParameterException.class)
-    public void findPerimeterTest_IrrelevantTextType() throws TriangleNotExistException, InvalidMethodParameterException {
+    @Test(expected = TriangleException.class)
+    public void findPerimeterTest_NullData() throws TriangleException {
         //given && when && then
         triangleService.findPerimeter(null);
     }
 
     @Test
-    public void isIsoscelesTest_RelevantData() throws TriangleNotExistException, InvalidMethodParameterException {
+    public void isIsoscelesTest_RelevantData() throws TriangleException {
         //given
         Triangle triangle = new Triangle(new Point(0,0), new Point (0, 4), new Point(4, 0));
 
@@ -85,32 +66,20 @@ public class TriangleServiceImplTest {
         Assert.assertTrue(actual);
     }
 
-    @Test(expected = InvalidMethodParameterException.class)
-    public void isIsoscelesTest_IrrelevantTextType() throws TriangleNotExistException, InvalidMethodParameterException {
+    @Test(expected = TriangleException.class)
+    public void isIsoscelesTest_NullData() throws TriangleException {
         //given && when && then
         triangleService.isIsosceles(null);
     }
 
-    @Test(expected = TriangleNotExistException.class)
-    public void isIsoscelesTest_IrrelevantTriangle() throws TriangleNotExistException, InvalidMethodParameterException {
-        //given && when && then
-        triangleService.isIsosceles(new Triangle(new Point(0,0), new Point (0, 4), new Point(0, 10)));
-    }
-
-    @Test(expected = InvalidMethodParameterException.class)
-    public void isEquilateralTest_IrrelevantTextType() throws TriangleNotExistException, InvalidMethodParameterException {
+    @Test(expected = TriangleException.class)
+    public void isEquilateralTest_NullData() throws TriangleException {
         //given && when && then
         triangleService.isEquilateral(null);
     }
 
-    @Test(expected = TriangleNotExistException.class)
-    public void isEquilateralTest_IrrelevantTriangle() throws TriangleNotExistException, InvalidMethodParameterException {
-        //given && when && then
-        triangleService.isEquilateral(new Triangle(new Point(0,0), new Point (0, 4), new Point(0, 10)));
-    }
-
     @Test
-    public void isRectangularTest_RelevantData() throws TriangleNotExistException, InvalidMethodParameterException {
+    public void isRectangularTest_RelevantData() throws TriangleException {
         //given
         Triangle triangle = new Triangle(new Point(0,0), new Point (0, 4), new Point(4, 0));
 
@@ -121,20 +90,14 @@ public class TriangleServiceImplTest {
         Assert.assertTrue(actual);
     }
 
-    @Test(expected = InvalidMethodParameterException.class)
-    public void isRectangularTest_IrrelevantTextType() throws TriangleNotExistException, InvalidMethodParameterException {
+    @Test(expected = TriangleException.class)
+    public void isRectangularTest_NullData() throws TriangleException {
         //given && when && then
         triangleService.isRectangular(null);
     }
 
-    @Test(expected = TriangleNotExistException.class)
-    public void isRectangularTest_IrrelevantTriangle() throws TriangleNotExistException, InvalidMethodParameterException {
-        //given && when && then
-        triangleService.isRectangular(new Triangle(new Point(0,0), new Point (0, 4), new Point(0, 10)));
-    }
-
     @Test
-    public void isAcuteTest_RelevantData() throws TriangleNotExistException, InvalidMethodParameterException {
+    public void isAcuteTest_RelevantData() throws TriangleException {
         //given
         Triangle triangle = new Triangle(new Point(0,0), new Point (0, 4), new Point(4, 0));
 
@@ -145,20 +108,14 @@ public class TriangleServiceImplTest {
         Assert.assertTrue(actual);
     }
 
-    @Test(expected = InvalidMethodParameterException.class)
-    public void isAcuteTest_IrrelevantTextType() throws TriangleNotExistException, InvalidMethodParameterException {
+    @Test(expected = TriangleException.class)
+    public void isAcuteTest_NullData() throws TriangleException {
         //given && when && then
         triangleService.isAcute(null);
     }
 
-    @Test(expected = TriangleNotExistException.class)
-    public void isAcuteTest_IrrelevantTriangle() throws TriangleNotExistException, InvalidMethodParameterException {
-        //given && when && then
-        triangleService.isAcute(new Triangle(new Point(0,0), new Point (0, 4), new Point(0, 10)));
-    }
-
     @Test
-    public void isObtuseTest_RelevantData() throws TriangleNotExistException, InvalidMethodParameterException {
+    public void isObtuseTest_RelevantData() throws TriangleException {
         //given
         Triangle triangle = new Triangle(new Point(2,-10), new Point (0, 0), new Point(0, 4));
 
@@ -169,15 +126,9 @@ public class TriangleServiceImplTest {
         Assert.assertTrue(actual);
     }
 
-    @Test(expected = InvalidMethodParameterException.class)
-    public void isObtuseTest_IrrelevantTextType() throws TriangleNotExistException, InvalidMethodParameterException {
+    @Test(expected = TriangleException.class)
+    public void isObtuseTest_NullData() throws TriangleException {
         //given && when && then
         triangleService.isObtuse(null);
-    }
-
-    @Test(expected = TriangleNotExistException.class)
-    public void isObtuseTest_IrrelevantTriangle() throws TriangleNotExistException, InvalidMethodParameterException {
-        //given && when && then
-        triangleService.isObtuse(new Triangle(new Point(0,0), new Point (0, 4), new Point(0, 10)));
     }
 }
