@@ -1,9 +1,8 @@
-package com.company.yavlash.util;
+package com.company.yavlash.parser;
 
-import com.company.yavlash.entity.Point;
-import com.company.yavlash.entity.Triangle;
-import com.company.yavlash.exception.InvalidMethodParameterException;
+import com.company.yavlash.exception.TriangleException;
 import com.company.yavlash.validator.TriangleValidator;
+import com.company.yavlash.validator.impl.TriangleValidatorImpl;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,29 +14,23 @@ import java.util.stream.Stream;
 public class TriangleParser {
     private static final Logger logger = LogManager.getLogger();
     private static final String SPACE_DELIMITER_REGEX = "\\s+";
+    TriangleValidator validator = new TriangleValidatorImpl();
 
-    public List<Triangle>  parseStringListToArray(List<String> parameters) throws InvalidMethodParameterException {
+    public List<double[]>  parseStringListOfTrianglesToArray(List<String> parameters) throws TriangleException {
         if (parameters == null || parameters.isEmpty()) {
-            throw new InvalidMethodParameterException("List is null or has not any parameters");
+            logger.log(Level.WARN, "Parsing is not successful");
+            throw new TriangleException("List is null or has not any parameters");
         }
-        List<Triangle> triangles = parameters.stream()
+
+        List<double[]> doubleParameters = parameters.stream()
                 .map(String::trim)
-                .filter(TriangleValidator::isTriangleData)
+                .filter(validator::isTriangleDataValid)
                 .map(parametersLine -> parametersLine.split(SPACE_DELIMITER_REGEX))
                 .map(array -> Stream.of(array)
                         .mapToDouble(Double::parseDouble)
                         .toArray())
-                .map(this::construct)
                 .collect(Collectors.toList());
         logger.log(Level.INFO, "Parsing is successful");
-        return triangles;
-    }
-
-    private Triangle construct(double[] parameters) {
-        return new Triangle(
-                new Point(parameters[0], parameters[1]),
-                new Point(parameters[2], parameters[3]),
-                new Point(parameters[4], parameters[5])
-        );
+        return doubleParameters;
     }
 }

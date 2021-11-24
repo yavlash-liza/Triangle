@@ -1,6 +1,7 @@
-package com.company.yavlash.util;
+package com.company.yavlash.reader;
 
-import com.company.yavlash.exception.InvalidMethodParameterException;
+import com.company.yavlash.exception.TriangleException;
+import com.company.yavlash.validator.impl.TriangleValidatorImpl;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,10 +16,11 @@ import java.util.stream.Stream;
 
 public class TriangleReader {
     private static final Logger logger = LogManager.getLogger();
+    TriangleValidatorImpl validator = new TriangleValidatorImpl();
 
-    public List<String> readFile(String path) throws InvalidMethodParameterException {
-        if (path == null || path.isBlank()) {
-            throw new InvalidMethodParameterException(String.format("File name %s is null or blank", path));
+    public List<String> readFile(String path) throws TriangleException {
+        if (!validator.isFilePathValid(path) || path.isBlank()) {
+            throw new TriangleException(String.format("File name (%s) is blank or file path is invalid", path));
         }
         Path dataFile = Paths.get(path);
         try (Stream<String> dataStream = Files.lines(dataFile)){
@@ -27,7 +29,8 @@ public class TriangleReader {
             logger.log(Level.INFO, "Read file {} is successful", dataFile.getFileName());
             return doubleStringList;
         } catch (IOException e) {
-            throw new InvalidMethodParameterException(String.format("Input error during reading file %s", dataFile.getFileName()), e);
+            logger.log(Level.WARN, "Reading file {} is not successful", dataFile.getFileName());
+            throw new TriangleException(String.format("Input error during reading file %s", dataFile.getFileName()), e);
         }
     }
 }
