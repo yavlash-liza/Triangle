@@ -1,2 +1,64 @@
-21-11-21 20:19.692 [main] INFO  com.company.yavlash.util.TriangleReader - Read file data.txt is successful
-21-11-21 20:19.731 [main] INFO  com.company.yavlash.util.TriangleParser - Parsing is successful
+21-11-24 00:30.523 [main] INFO  com.company.yavlash.reader.TriangleReader - Read file data.txt is successful
+21-11-24 00:30.581 [main] INFO  com.company.yavlash.parser.TriangleParser - Parsing is successful
+21-11-24 00:30.586 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=0, pointA=Point{x=2.0, y=3.0}, pointB=Point{x=0.0, y=4.0}, pointC=Point{x=0.0, y=0.0}} was created
+21-11-24 00:30.589 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=0, pointA=Point{x=2.0, y=3.0}, pointB=Point{x=0.0, y=4.0}, pointC=Point{x=0.0, y=0.0}} was created
+21-11-24 00:30.590 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=1, pointA=Point{x=3.0, y=2.0}, pointB=Point{x=8.0, y=0.0}, pointC=Point{x=7.0, y=5.0}} was created
+21-11-24 00:30.593 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=1, pointA=Point{x=3.0, y=2.0}, pointB=Point{x=8.0, y=0.0}, pointC=Point{x=7.0, y=5.0}} was created
+21-11-24 00:30.598 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=2, pointA=Point{x=-3.2, y=7.5}, pointB=Point{x=-1.4, y=10.89}, pointC=Point{x=1.2, y=7.5}} was created
+21-11-24 00:30.599 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=2, pointA=Point{x=-3.2, y=7.5}, pointB=Point{x=-1.4, y=10.89}, pointC=Point{x=1.2, y=7.5}} was created
+21-11-24 00:30.600 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=3, pointA=Point{x=-3.2, y=-20.0}, pointB=Point{x=-25.0, y=-7.01}, pointC=Point{x=-16.4, y=-5.0}} was created
+21-11-24 00:30.601 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=3, pointA=Point{x=-3.2, y=-20.0}, pointB=Point{x=-25.0, y=-7.01}, pointC=Point{x=-16.4, y=-5.0}} was created
+21-11-24 00:30.602 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=4, pointA=Point{x=-15.47, y=15.47}, pointB=Point{x=-11.0, y=11.0}, pointC=Point{x=-7.83, y=7.83}} was created
+21-11-24 00:30.603 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=4, pointA=Point{x=-15.47, y=15.47}, pointB=Point{x=-11.0, y=11.0}, pointC=Point{x=-7.83, y=7.83}} was created
+21-11-24 00:30.603 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=5, pointA=Point{x=2.5, y=1.2}, pointB=Point{x=7.5, y=-7.5}, pointC=Point{x=-0.2, y=6.5}} was created
+21-11-24 00:30.607 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=5, pointA=Point{x=2.5, y=1.2}, pointB=Point{x=7.5, y=-7.5}, pointC=Point{x=-0.2, y=6.5}} was created
+21-11-24 00:33.282 [main] INFO  com.company.yavlash.reader.TriangleReader - Read file data.txt is successful
+21-11-24 00:33.324 [main] INFO  com.company.yavlash.parser.TriangleParser - Parsing is successful
+21-11-24 00:33.332 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=0, pointA=Point{x=2.0, y=3.0}, pointB=Point{x=0.0, y=4.0}, pointC=Point{x=0.0, y=0.0}} was created
+21-11-24 00:33.333 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=0, pointA=Point{x=2.0, y=3.0}, pointB=Point{x=0.0, y=4.0}, pointC=Point{x=0.0, y=0.0}} was created
+21-11-24 00:33.333 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=1, pointA=Point{x=3.0, y=2.0}, pointB=Point{x=8.0, y=0.0}, pointC=Point{x=7.0, y=5.0}} was created
+21-11-24 00:33.334 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=1, pointA=Point{x=3.0, y=2.0}, pointB=Point{x=8.0, y=0.0}, pointC=Point{x=7.0, y=5.0}} was created
+21-11-24 00:33.335 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=2, pointA=Point{x=-3.2, y=7.5}, pointB=Point{x=-1.4, y=10.89}, pointC=Point{x=1.2, y=7.5}} was created
+21-11-24 00:33.336 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=2, pointA=Point{x=-3.2, y=7.5}, pointB=Point{x=-1.4, y=10.89}, pointC=Point{x=1.2, y=7.5}} was created
+21-11-24 00:33.337 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=3, pointA=Point{x=-3.2, y=-20.0}, pointB=Point{x=-25.0, y=-7.01}, pointC=Point{x=-16.4, y=-5.0}} was created
+21-11-24 00:33.337 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=3, pointA=Point{x=-3.2, y=-20.0}, pointB=Point{x=-25.0, y=-7.01}, pointC=Point{x=-16.4, y=-5.0}} was created
+21-11-24 00:33.338 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=4, pointA=Point{x=-15.47, y=15.47}, pointB=Point{x=-11.0, y=11.0}, pointC=Point{x=-7.83, y=7.83}} was created
+21-11-24 00:33.339 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=4, pointA=Point{x=-15.47, y=15.47}, pointB=Point{x=-11.0, y=11.0}, pointC=Point{x=-7.83, y=7.83}} was created
+21-11-24 00:33.340 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=5, pointA=Point{x=2.5, y=1.2}, pointB=Point{x=7.5, y=-7.5}, pointC=Point{x=-0.2, y=6.5}} was created
+21-11-24 00:33.341 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=5, pointA=Point{x=2.5, y=1.2}, pointB=Point{x=7.5, y=-7.5}, pointC=Point{x=-0.2, y=6.5}} was created
+21-11-24 00:33.345 [main] INFO  com.company.yavlash.entity.TriangleWarehouse - Creating singleton warehouse
+21-11-24 00:33.345 [main] INFO  com.company.yavlash.entity.TriangleWarehouse - Warehouse does not contains triangle with id 1
+21-11-24 00:33.348 [main] INFO  com.company.yavlash.entity.TriangleWarehouse - Warehouse does not contains triangle with id 2
+21-11-24 00:33.350 [main] INFO  com.company.yavlash.entity.TriangleWarehouse - Warehouse does not contains triangle with id 3
+21-11-24 00:33.351 [main] INFO  com.company.yavlash.entity.TriangleWarehouse - Warehouse does not contains triangle with id 4
+21-11-24 00:33.352 [main] INFO  com.company.yavlash.entity.TriangleWarehouse - Warehouse does not contains triangle with id 5
+21-11-24 00:38.469 [main] INFO  com.company.yavlash.reader.TriangleReader - Read file data.txt is successful
+21-11-24 00:38.498 [main] INFO  com.company.yavlash.parser.TriangleParser - Parsing is successful
+21-11-24 00:38.503 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=0, pointA=Point{x=2.0, y=3.0}, pointB=Point{x=0.0, y=4.0}, pointC=Point{x=0.0, y=0.0}} was created
+21-11-24 00:38.503 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=0, pointA=Point{x=2.0, y=3.0}, pointB=Point{x=0.0, y=4.0}, pointC=Point{x=0.0, y=0.0}} was created
+21-11-24 00:38.504 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=1, pointA=Point{x=3.0, y=2.0}, pointB=Point{x=8.0, y=0.0}, pointC=Point{x=7.0, y=5.0}} was created
+21-11-24 00:38.505 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=1, pointA=Point{x=3.0, y=2.0}, pointB=Point{x=8.0, y=0.0}, pointC=Point{x=7.0, y=5.0}} was created
+21-11-24 00:38.505 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=2, pointA=Point{x=-3.2, y=7.5}, pointB=Point{x=-1.4, y=10.89}, pointC=Point{x=1.2, y=7.5}} was created
+21-11-24 00:38.506 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=2, pointA=Point{x=-3.2, y=7.5}, pointB=Point{x=-1.4, y=10.89}, pointC=Point{x=1.2, y=7.5}} was created
+21-11-24 00:38.507 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=3, pointA=Point{x=-3.2, y=-20.0}, pointB=Point{x=-25.0, y=-7.01}, pointC=Point{x=-16.4, y=-5.0}} was created
+21-11-24 00:38.507 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=3, pointA=Point{x=-3.2, y=-20.0}, pointB=Point{x=-25.0, y=-7.01}, pointC=Point{x=-16.4, y=-5.0}} was created
+21-11-24 00:38.508 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=4, pointA=Point{x=-15.47, y=15.47}, pointB=Point{x=-11.0, y=11.0}, pointC=Point{x=-7.83, y=7.83}} was created
+21-11-24 00:38.508 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=4, pointA=Point{x=-15.47, y=15.47}, pointB=Point{x=-11.0, y=11.0}, pointC=Point{x=-7.83, y=7.83}} was created
+21-11-24 00:38.509 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=5, pointA=Point{x=2.5, y=1.2}, pointB=Point{x=7.5, y=-7.5}, pointC=Point{x=-0.2, y=6.5}} was created
+21-11-24 00:38.509 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=5, pointA=Point{x=2.5, y=1.2}, pointB=Point{x=7.5, y=-7.5}, pointC=Point{x=-0.2, y=6.5}} was created
+21-11-24 00:38.511 [main] INFO  com.company.yavlash.entity.TriangleWarehouse - Creating singleton warehouse
+21-11-24 00:40.813 [main] INFO  com.company.yavlash.reader.TriangleReader - Read file data.txt is successful
+21-11-24 00:40.827 [main] INFO  com.company.yavlash.parser.TriangleParser - Parsing is successful
+21-11-24 00:40.829 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=0, pointA=Point{x=2.0, y=3.0}, pointB=Point{x=0.0, y=4.0}, pointC=Point{x=0.0, y=0.0}} was created
+21-11-24 00:40.830 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=0, pointA=Point{x=2.0, y=3.0}, pointB=Point{x=0.0, y=4.0}, pointC=Point{x=0.0, y=0.0}} was created
+21-11-24 00:40.830 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=1, pointA=Point{x=3.0, y=2.0}, pointB=Point{x=8.0, y=0.0}, pointC=Point{x=7.0, y=5.0}} was created
+21-11-24 00:40.831 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=1, pointA=Point{x=3.0, y=2.0}, pointB=Point{x=8.0, y=0.0}, pointC=Point{x=7.0, y=5.0}} was created
+21-11-24 00:40.832 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=2, pointA=Point{x=-3.2, y=7.5}, pointB=Point{x=-1.4, y=10.89}, pointC=Point{x=1.2, y=7.5}} was created
+21-11-24 00:40.833 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=2, pointA=Point{x=-3.2, y=7.5}, pointB=Point{x=-1.4, y=10.89}, pointC=Point{x=1.2, y=7.5}} was created
+21-11-24 00:40.833 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=3, pointA=Point{x=-3.2, y=-20.0}, pointB=Point{x=-25.0, y=-7.01}, pointC=Point{x=-16.4, y=-5.0}} was created
+21-11-24 00:40.834 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=3, pointA=Point{x=-3.2, y=-20.0}, pointB=Point{x=-25.0, y=-7.01}, pointC=Point{x=-16.4, y=-5.0}} was created
+21-11-24 00:40.834 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=4, pointA=Point{x=-15.47, y=15.47}, pointB=Point{x=-11.0, y=11.0}, pointC=Point{x=-7.83, y=7.83}} was created
+21-11-24 00:40.835 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=4, pointA=Point{x=-15.47, y=15.47}, pointB=Point{x=-11.0, y=11.0}, pointC=Point{x=-7.83, y=7.83}} was created
+21-11-24 00:40.836 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=5, pointA=Point{x=2.5, y=1.2}, pointB=Point{x=7.5, y=-7.5}, pointC=Point{x=-0.2, y=6.5}} was created
+21-11-24 00:40.836 [main] INFO  com.company.yavlash.factory.TriangleFactory - New triangle Triangle{triangleId=5, pointA=Point{x=2.5, y=1.2}, pointB=Point{x=7.5, y=-7.5}, pointC=Point{x=-0.2, y=6.5}} was created
+21-11-24 00:40.839 [main] INFO  com.company.yavlash.entity.TriangleWarehouse - Creating singleton warehouse
