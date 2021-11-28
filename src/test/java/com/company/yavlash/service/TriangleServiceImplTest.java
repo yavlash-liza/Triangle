@@ -24,7 +24,7 @@ public class TriangleServiceImplTest {
         double expected = 3.00;
 
         //when
-        double actual = triangleService.findSquare(triangle);
+        double actual = triangleService.findArea(triangle);
 
         //then
         Assert.assertEquals(actual, expected, 3);
@@ -33,7 +33,7 @@ public class TriangleServiceImplTest {
     @Test(expected = TriangleException.class)
     public void findSquareTest_NullData() throws TriangleException {
         //given && when && then
-        triangleService.findSquare(null);
+        triangleService.findArea(null);
     }
 
     @Test
