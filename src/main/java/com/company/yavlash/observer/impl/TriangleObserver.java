@@ -21,12 +21,12 @@ public class TriangleObserver implements Observer {
         Triangle triangle = event.getSource();
         try {
             double perimeter = triangleService.findPerimeter(triangle);
-            double area = triangleService.findSquare(triangle);
+            double area = triangleService.findArea(triangle);
             TriangleParameters triangleParameters = new TriangleParameters(perimeter, area);
             triangleWarehouse.put(triangle.getTriangleId(), triangleParameters);
             logger.log(Level.INFO, "Parameters of the triangle #{} were updated", triangle.getTriangleId());
-        } catch (TriangleException e) {
-            logger.log(Level.WARN, "Exception {} in parametersChange method!", e.getMessage());
+        } catch (TriangleException exception) {
+            logger.log(Level.ERROR, "Exception {} in parametersChange method!", exception.getMessage());
         }
     }
 }
