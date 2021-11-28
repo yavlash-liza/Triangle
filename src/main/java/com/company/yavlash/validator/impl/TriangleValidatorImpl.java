@@ -9,23 +9,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TriangleValidatorImpl implements TriangleValidator {
-    private static final String TRIANGLE_DATA_REGEX = "^-?\\d+(\\.\\d+)?(\\s+-?\\d+(\\.\\d+)?){5}$";
+    private static final String TRIANGLE_DATA_REGEX = "^-?\\d+(\\.\\d+)?(\\s+-?\\d+(\\.\\d+)?){5}$"; //исправить(выделить повторябщую часть отдельно)
 
     public TriangleValidatorImpl() {
     }
 
+    @Override
     public boolean isTriangleDataValid(String data) {
         return data.matches(TRIANGLE_DATA_REGEX);
     }
 
+    @Override
     public boolean isFilePathValid(String filepath) {
-        if (filepath == null) {
-            return false;
+        boolean isValid = false;
+        if (filepath != null) {
+            File file = new File(filepath);
+            isValid = file.exists() && (file.length() != 0);
         }
-        File file = new File(filepath);
-        return file.exists() && (file.length() != 0);
+        return isValid;
     }
 
+    @Override
     public boolean isTriangle(Triangle triangle){
         if (triangle == null || triangle.getPointA() == null || triangle.getPointB() == null || triangle.getPointC() == null) {
             return false;
