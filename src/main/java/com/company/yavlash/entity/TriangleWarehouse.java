@@ -25,11 +25,7 @@ public class TriangleWarehouse {
     }
 
     public TriangleParameters get(Long id){
-        if (!map.containsKey(id)) {
-            return map.get(id);
-        }
-        logger.log(Level.INFO, "Warehouse does not contains triangle with id {}", id);
-        return null;
+        return map.getOrDefault(id, null);
     }
 
     public TriangleParameters put(Long id, TriangleParameters parameters) {

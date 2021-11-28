@@ -4,15 +4,10 @@ import com.company.yavlash.observer.Observable;
 import com.company.yavlash.observer.Observer;
 import com.company.yavlash.observer.TriangleEvent;
 import com.company.yavlash.util.IdGenerator;
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.util.Comparator;
-import java.util.Objects;
 
 public class Triangle implements Observable {
-    private static final Logger logger = LogManager.getLogger();
     private Long triangleId;
     private Point pointA;
     private Point pointB;
@@ -88,8 +83,6 @@ public class Triangle implements Observable {
         if (object == null || getClass() != object.getClass()) {return false;}
         Triangle aThat = (Triangle) object;
 
-        if(!Objects.equals(getTriangleId(), aThat.getTriangleId())){return false;}
-
         if(getPointA() == null) {
             if(aThat.getPointA() != null){return false;}
         } else if(!getPointA().equals(aThat.getPointA())){return false;}
@@ -107,7 +100,6 @@ public class Triangle implements Observable {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + (getTriangleId() == null ? 0 : getTriangleId().hashCode());
         result = prime * result + (getPointA() == null ? 0 : getPointA().hashCode());
         result = prime * result + (getPointB() == null ? 0 : getPointB().hashCode());
         result = prime * result + (getPointC() == null ? 0 : getPointC().hashCode());
