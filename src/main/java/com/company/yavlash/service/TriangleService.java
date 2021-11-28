@@ -4,7 +4,7 @@ import com.company.yavlash.entity.Triangle;
 import com.company.yavlash.exception.TriangleException;
 
 public interface TriangleService {
-    double findSquare(Triangle triangle) throws TriangleException;
+    double findArea(Triangle triangle) throws TriangleException;
     double findPerimeter(Triangle triangle) throws TriangleException;
     boolean isIsosceles(Triangle triangle) throws TriangleException;
     boolean isEquilateral(Triangle triangle) throws TriangleException;

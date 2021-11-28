@@ -9,12 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TriangleServiceImpl implements TriangleService {
-    private static final String ERROR_MESSAGE = "Error data! Null triangle!";
 
     @Override
-    public double findSquare(Triangle triangle) throws TriangleException {
+    public double findArea(Triangle triangle) throws TriangleException {
         if (triangle == null) {
-            throw new TriangleException(ERROR_MESSAGE);
+            throw new TriangleException("Error data! Null triangle!");
         }
         List<Double> sides = findSides(triangle);
         double halfPerimeter = findPerimeter(triangle) * 0.5;
@@ -23,7 +22,7 @@ public class TriangleServiceImpl implements TriangleService {
     }
 
     private List<Double> findSides(Triangle triangle) {
-        return new ArrayList<>() {{
+        return new ArrayList<>(){{
             add(findSide(triangle.getPointA(), triangle.getPointB()));
             add(findSide(triangle.getPointB(), triangle.getPointC()));
             add(findSide(triangle.getPointA(), triangle.getPointC()));
@@ -37,7 +36,7 @@ public class TriangleServiceImpl implements TriangleService {
     @Override
     public double findPerimeter(Triangle triangle) throws TriangleException {
         if (triangle == null) {
-            throw new TriangleException(ERROR_MESSAGE);
+            throw new TriangleException("Error data! Null triangle!");
         }
         List<Double> sides = findSides(triangle);
         return sides.stream().mapToDouble(side -> side).sum();
@@ -46,7 +45,7 @@ public class TriangleServiceImpl implements TriangleService {
     @Override
     public boolean isIsosceles(Triangle triangle) throws TriangleException {
         if (triangle == null) {
-            throw new TriangleException(ERROR_MESSAGE);
+            throw new TriangleException("Error data! Null triangle!");
         }
         List<Double> sides = findSides(triangle);
         return checkEquality(sides.get(0), sides.get(1)) || checkEquality(sides.get(0), sides.get(2))
@@ -60,7 +59,7 @@ public class TriangleServiceImpl implements TriangleService {
     @Override
     public boolean isEquilateral(Triangle triangle) throws TriangleException {
         if (triangle == null) {
-            throw new TriangleException(ERROR_MESSAGE);
+            throw new TriangleException("Error data! Null triangle!");
         }
         List<Double> sides = findSides(triangle);
         return checkEquality(sides.get(0), sides.get(1)) && checkEquality(sides.get(0), sides.get(2));
@@ -69,7 +68,7 @@ public class TriangleServiceImpl implements TriangleService {
     @Override
     public boolean isRectangular(Triangle triangle) throws TriangleException {
         if (triangle == null) {
-            throw new TriangleException(ERROR_MESSAGE);
+            throw new TriangleException("Error data! Null triangle!");
         }
         List<Double> sides = findSides(triangle);
         boolean first = sides.get(0) == Math.sqrt(Math.pow(sides.get(1), 2) + Math.pow(sides.get(2), 2));
@@ -81,7 +80,7 @@ public class TriangleServiceImpl implements TriangleService {
     @Override
     public boolean isAcute(Triangle triangle) throws TriangleException {
         if (triangle == null) {
-            throw new TriangleException(ERROR_MESSAGE);
+            throw new TriangleException("Error data! Null triangle!");
         }
         List<Double> sides = findSides(triangle);
         return Math.pow(sides.get(0), 2) + Math.pow(sides.get(1), 2) > Math.pow(sides.get(2), 2);
@@ -90,7 +89,7 @@ public class TriangleServiceImpl implements TriangleService {
     @Override
     public boolean isObtuse(Triangle triangle) throws TriangleException {
         if (triangle == null) {
-            throw new TriangleException(ERROR_MESSAGE);
+            throw new TriangleException("Error data! Null triangle!");
         }
         List<Double> sides = findSides(triangle);
         return Math.pow(sides.get(0), 2) + Math.pow(sides.get(1), 2) < Math.pow(sides.get(2), 2);
