@@ -18,10 +18,9 @@ public class TriangleParser {
 
     public List<double[]>  parseStringListOfTrianglesToArray(List<String> parameters) throws TriangleException {
         if (parameters == null || parameters.isEmpty()) {
-            logger.log(Level.WARN, "Parsing is not successful");
+            logger.log(Level.ERROR, "Parsing is not successful");
             throw new TriangleException("List is null or has not any parameters");
         }
-
         List<double[]> doubleParameters = parameters.stream()
                 .map(String::trim)
                 .filter(validator::isTriangleDataValid)
