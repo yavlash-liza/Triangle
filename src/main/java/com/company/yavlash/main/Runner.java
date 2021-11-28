@@ -1,4 +1,4 @@
-package com.company.yavlash;
+package com.company.yavlash.main;
 
 import com.company.yavlash.entity.Triangle;
 import com.company.yavlash.entity.TriangleParameters;
@@ -24,7 +24,7 @@ public class Runner {
         TriangleWarehouse triangleWarehouse = TriangleWarehouse.getInstance();
         triangles.forEach(triangle -> {
             try {
-                double area = triangleService.findSquare(triangle);
+                double area = triangleService.findArea(triangle);
                 double perimeter = triangleService.findPerimeter(triangle);
                 TriangleParameters triangleParameters = new TriangleParameters(perimeter, area);
                 triangleWarehouse.put(triangle.getTriangleId(), triangleParameters);
@@ -39,6 +39,5 @@ public class Runner {
         triangles.sort(new Triangle.PerimeterComparator());
         System.out.println("-------------");
         System.out.println(triangles);
-//        System.out.println(IdGenerator.generateId());
     }
 }
