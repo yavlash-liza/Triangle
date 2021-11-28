@@ -28,9 +28,9 @@ public class TriangleReader {
                     .collect(Collectors.toList());
             logger.log(Level.INFO, "Read file {} is successful", dataFile.getFileName());
             return doubleStringList;
-        } catch (IOException e) {
-            logger.log(Level.WARN, "Reading file {} is not successful", dataFile.getFileName());
-            throw new TriangleException(String.format("Input error during reading file %s", dataFile.getFileName()), e);
+        } catch (IOException exception) {
+            logger.log(Level.ERROR, "Reading file {} is not successful", dataFile.getFileName());
+            throw new TriangleException(String.format("Input error during reading file %s", dataFile.getFileName()), exception);
         }
     }
 }
